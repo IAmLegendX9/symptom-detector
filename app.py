@@ -32,7 +32,7 @@ feature_names = pd.read_csv("data/training.csv").drop(columns=["prognosis","Unna
 
 @app.route("/")
 def home():
-    return send_from_directory(".", "index.html")
+    return send_from_directory('.', 'index.html')
 
 @app.route("/predict", methods=["POST"])
 def predict():
