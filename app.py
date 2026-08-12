@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import pickle
 import pandas as pd
@@ -15,7 +15,7 @@ api_key = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=api_key)
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)
 
 client = genai.Client(api_key=api_key)
@@ -32,7 +32,7 @@ feature_names = pd.read_csv("data/training.csv").drop(columns=["prognosis","Unna
 
 @app.route("/")
 def home():
-    return "Backend is running and model is loaded!"
+    return send_from_directory(".", "index.html")
 
 @app.route("/predict", methods=["POST"])
 def predict():
