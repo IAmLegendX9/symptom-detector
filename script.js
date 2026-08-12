@@ -269,7 +269,7 @@ predictButton.addEventListener("click", async function () {
     }, 2000);
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/predict", {
+        const response = await fetch("https://medicore-ai-2t4k.onrender.com/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -513,7 +513,7 @@ async function handleUserMessage() {
     );
     
     try {
-        const response = await fetch("http://127.0.0.1:5000/chat_bot", {
+        const response = await fetch("https://medicore-ai-2t4k.onrender.com/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message: cleanUserText })
