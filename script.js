@@ -269,7 +269,7 @@ predictButton.addEventListener("click", async function () {
     }, 2000);
 
     try {
-        const response = await fetch("https://medicore-ai-2t4k.onrender.com/", {
+        const response = await fetch('/predict', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -314,7 +314,7 @@ predictButton.addEventListener("click", async function () {
                 ⚠️ Connection Ghosted
             </span>
             <span style="font-size: 14px; font-weight: 500; color: var(--text-muted); display: block; line-height: 1.4;">
-                I tried calling your local Flask app at <code style="background: rgba(239,68,68,0.1); padding: 2px 6px; border-radius: 4px;">http://127.0.0.1:5000</code>, but nobody picked up. Is the server running?
+                I tried calling your local Flask app at <code style="background: rgba(239,68,68,0.1); padding: 2px 6px; border-radius: 4px;">https://medicore-ai-2t4k.onrender.com/</code>, but nobody picked up. Is the server running?
             </span>
         `;
         resultCard.classList.remove("hidden");
@@ -513,7 +513,7 @@ async function handleUserMessage() {
     );
     
     try {
-        const response = await fetch("https://medicore-ai-2t4k.onrender.com/", {
+        const response = await fetch('/chat_bot', {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message: cleanUserText })
