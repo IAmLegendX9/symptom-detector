@@ -3,7 +3,7 @@ import pickle
 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 df = pd.read_csv("data/training.csv")    
 
@@ -43,3 +43,20 @@ print(f"Accuracy: {accuracy * 100:.2f}%")
 #     pickle.dump(model, file)
 
 print("Model saved successfully!")
+
+# To test the model against an UNKNOWN dataset:
+
+test_data = pd.read_csv("data/testing.csv")
+
+x_test = test_data.drop(columns=["prognosis"])
+y_test = test_data["prognosis"]
+
+
+pred = model.predict(x_test)
+
+acc = accuracy_score(y_test, pred)
+print(f"Upon TESTING the model against an unknown dataset, the accuracy is found to be {acc * 100:.2f}%")
+
+print(classification_report(y_test, pred))
+print(confusion_matrix(y_test, pred))
+
