@@ -19,7 +19,7 @@ An interactive full-stack web application combining **Random Forest classificati
 </div>
 
 > [!WARNING]
-> **Medical Disclaimer:** Medicore.AI is an educational proof-of-concept and decision-support prototype only. It is **not** a certified medical device and does **not** provide official medical diagnosis, treatment, or clinical advice. Always consult a licensed healthcare professional for medical concerns.
+> **Medical Disclaimer:** MediCore.AI is an educational proof-of-concept and decision-support prototype only. It is **not** a certified medical device and does **not** provide official medical diagnosis, treatment, or clinical advice. Always consult a licensed healthcare professional for medical concerns.
 
 ---
 
@@ -81,11 +81,22 @@ Detailed Classification Metrics:
 
 ## 4. Screenshots
 
-| Symptom Selection Interface | Diagnostic & AI Results |
-| --- | --- |
-| *(Add dashboard screenshot here)* | *(Add prediction result screenshot here)* |
+<div align="center">
+
+### Symptom Selection Interface
+<img width="1200" height="550" alt="medicore_ai_homepage" src="https://github.com/user-attachments/assets/e1ad8dac-432f-4d54-a61c-0539b8bd24e5" />
+---
 
 ---
+### Diagnostic & AI Chatbot Results
+<img width="900" height="600" alt="medicore_ai_prediction" src="https://github.com/user-attachments/assets/d7abb047-4bbd-485b-b6ed-b6fdea7f9bb6" />
+
+---
+### Chatbot Implementation - AI Layer
+<img width="1100" height="600" alt="medicore_ai_chatbot" src="https://github.com/user-attachments/assets/7ef7e87c-b3b2-469c-9e39-000d564880c4" />
+
+</div>
+
 
 ## 📁 5. Project Structure
 
@@ -126,7 +137,7 @@ Medicore.AI/
 | --- | --- | --- |
 | **Flask API Backend** | 🟢 Completed | Built REST API routes in `app.py` for model inference. |
 | **Responsive Web Frontend** | 🟢 Completed | Developed lightweight UI with HTML5, CSS3, and JavaScript. |
-| **Gemini AI Integration** | 🟢 Completed | Integrated `google-genai` SDK for contextual explanations. |
+| **Gemini AI Integration** | 🟡 In Progress | API route established; natural language response formatting and context memory are under active development. |
 | **Production Deployment** | 🟢 Completed | Deployed live web service on Render via Gunicorn HTTP server. |
 
 ### Phase 3: Long-Term Roadmap & Coming Soon
@@ -160,8 +171,8 @@ Medicore.AI/
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/your-username/Medicore.AI.git](https://github.com/your-username/Medicore.AI.git)
-cd Medicore.AI
+git clone [https://github.com/IAmLegendX9/symptom-detector](https://github.com/IAmLegendX9/symptom-detector)
+cd symptom-detector
 
 ```
 
